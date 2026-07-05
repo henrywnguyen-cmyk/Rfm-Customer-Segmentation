@@ -35,7 +35,7 @@ The notebook walks through the full analysis end to end:
 - **Frequency drives spend more than recency.** The R×F heatmap shows that customers with the highest frequency score spend roughly 3x more than any other group, regardless of how recently they last bought. Converting first-time buyers into repeat buyers is the single biggest lever for revenue growth.
 
 ## Data Source
-Built on Ditch's Shopify order export, covering **95,282 line items across 54,830 unique orders**, filtered down to **49,411 valid paid orders from 36,062 unique customers** after cleaning. *(Note: this uses real company sales data. 
+Built on Ditch's Shopify order export, covering **95,282 line items across 54,830 unique orders**, filtered down to **49,411 valid paid orders from 36,062 unique customers** after cleaning.
 
 ## Tools & Skills Used
 - **Python** (pandas, numpy): data cleaning, RFM metric calculation, quintile scoring
