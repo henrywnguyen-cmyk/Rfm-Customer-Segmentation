@@ -1,5 +1,3 @@
-<div align="center">
-  <img src="assets/ditch-logo.webp" alt="Ditch logo" width="500"/>
   <h1>RFM Customer Segmentation</h1>
   <h2>Segmenting Ditch customers by Recency, Frequency, and Monetary value to prioritize retention and re-engagement</h2>
 </div>
