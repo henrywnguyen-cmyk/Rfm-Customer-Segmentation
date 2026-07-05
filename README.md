@@ -4,7 +4,7 @@
 </div>
 
 ## Overview
-This project segments Ditch's customer base using the RFM (Recency, Frequency, Monetary) framework, applied to real Shopify order data spanning **April 2025 – April 2026**. Each customer is scored on how recently they bought, how often they buy, and how much they've spent, then bucketed into six actionable segments — from Champions to One-Time Buyers — to guide marketing and retention decisions.
+This project segments Ditch's customer base using the RFM (Recency, Frequency, Monetary) framework, applied to real Shopify order data spanning **April 2025 to April 2026**. Each customer is scored on how recently they bought, how often they buy, and how much they've spent, then bucketed into six actionable segments, from Champions to One-Time Buyers, to guide marketing and retention decisions.
 
 ## What's Inside
 The notebook walks through the full analysis end to end:
@@ -29,32 +29,26 @@ The notebook walks through the full analysis end to end:
 | One-Time Buyer | Everything else | Nurture sequence |
 
 ## Key Insights
-- **Champions drive outsized revenue** — 18.6% of customers generate 31.9% of all revenue, making retention of this group the highest-ROI focus area.
-- **At Risk is the highest-urgency segment** — 7,974 customers who've ordered multiple times haven't returned in 263 days on average, representing the most recoverable revenue right now.
-- **Most customers only order once** — median frequency is 1, pointing to a retention problem rather than an acquisition problem. A post-purchase email flow could shift this meaningfully.
-- **Frequency drives spend more than recency** — the R×F heatmap shows that customers with the highest frequency score spend roughly 3x more than any other group, regardless of how recently they last bought. Converting first-time buyers into repeat buyers is the single biggest lever for revenue growth.
+- **Champions drive outsized revenue.** 18.6% of customers generate 31.9% of all revenue, making retention of this group the highest-ROI focus area.
+- **At Risk is the highest-urgency segment.** 7,974 customers who've ordered multiple times haven't returned in 263 days on average, representing the most recoverable revenue right now.
+- **Most customers only order once.** Median frequency is 1, pointing to a retention problem rather than an acquisition problem. A post-purchase email flow could shift this meaningfully.
+- **Frequency drives spend more than recency.** The R×F heatmap shows that customers with the highest frequency score spend roughly 3x more than any other group, regardless of how recently they last bought. Converting first-time buyers into repeat buyers is the single biggest lever for revenue growth.
 
 ## Data Source
-Built on Ditch's Shopify order export (`orders_cleaned.csv`), covering **95,282 line items across 54,830 unique orders**, filtered down to **49,411 valid paid orders from 36,062 unique customers** after cleaning. *(Note: this uses real company sales data — confirm internally whether it's appropriate to publish exact revenue and customer-count figures before making this repo public.)*
+Built on Ditch's Shopify order export (`orders_cleaned.csv`), covering **95,282 line items across 54,830 unique orders**, filtered down to **49,411 valid paid orders from 36,062 unique customers** after cleaning. *(Note: this uses real company sales data. Confirm internally whether it's appropriate to publish exact revenue and customer-count figures before making this repo public.)*
 
 ## Tools & Skills Used
-- **Python** (pandas, numpy) — data cleaning, RFM metric calculation, quintile scoring
-- **Matplotlib & Seaborn** — segment visualizations and the R×F heatmap
-- **Jupyter Notebook** — end-to-end analysis and documentation
+- **Python** (pandas, numpy): data cleaning, RFM metric calculation, quintile scoring
+- **Matplotlib & Seaborn**: segment visualizations and the R×F heatmap
+- **Jupyter Notebook**: end-to-end analysis and documentation
 
 ## Getting Started
 1. Clone this repo and open `RFM_analysis.ipynb` in Jupyter.
 2. Place your own cleaned orders CSV at the path referenced in the notebook (`orders_cleaned.csv`), matching the expected columns (`Name`, `Email`, `Created at`, `Total`, `Refunded Amount`, `Financial Status`, `Cancelled at`).
-3. Run all cells top to bottom — the notebook will output segment charts and export `rfm_segments.csv`.
+3. Run all cells top to bottom. The notebook will output segment charts and export `rfm_segments.csv`.
 
 ## Future Improvements
 - Automate the segment definitions with configurable thresholds instead of hardcoded quintile cutoffs
 - Add a cohort-based view to track how customers move between segments over time
 - Layer in product-level data to see which product families are most associated with Champion-tier customers
 - Build a lightweight dashboard (e.g., in Power BI or Streamlit) on top of the exported CSV for non-technical stakeholders
-
-## Author
-*[Your Name]* • [LinkedIn](#) • [GitHub](#)
-
-## License
-This project is available under the [MIT license](LICENSE).
