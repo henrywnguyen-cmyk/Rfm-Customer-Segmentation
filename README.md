@@ -1,3 +1,4 @@
+<div align="center">
   <h1>RFM Customer Segmentation</h1>
   <h2>Segmenting Ditch customers by Recency, Frequency, and Monetary value to prioritize retention and re-engagement</h2>
 </div>
